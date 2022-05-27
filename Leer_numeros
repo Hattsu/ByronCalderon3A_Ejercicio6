@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ByronCalderon3A_Ejercicio6
+{
+
+    public class Leer_numeros
+    {
+        private int Numero1 { set; get; }
+        private int[] Numero2 { set; get; }
+        private int Valor_suma{ get; set; }
+        public Leer_numeros()
+        {
+            this.Numero1 = 51;
+        }
+
+        public void Calcular()
+        {
+            if (Numero1 < 1)
+            {
+                do
+                {
+
+                    Console.WriteLine(++Numero1);
+
+                } while (Numero1 != 0);
+
+                Numero2 = new int[Numero1];
+                for (int i = 0; i <= Numero1; i++)
+                {
+
+                    Console.WriteLine("Numeros: " + Numero2[i]);
+                    Valor_suma = Valor_suma + Numero2[i];
+                }
+                Console.WriteLine("Valor total de la suna: " + Valor_suma);
+            }
+            else
+            {
+                do
+                {
+
+                    Console.WriteLine(--Numero1);
+
+                } while (Numero1 != 0);
+            }
+            Console.ReadKey();
+        }
+    }
+}
